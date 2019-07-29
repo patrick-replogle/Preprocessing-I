@@ -182,19 +182,6 @@ h3 {
     margin: 0 20px 0 20px;
   }
 }
-@media (max-width: 800px) {
-  .header {
-    display: flex;
-    justify-content: center;
-    margin: 15px 3% 20px 0;
-  }
-  .header nav a {
-    text-decoration: none;
-    font-size: 2rem;
-    color: black;
-    margin: 0 20px 0 20px;
-  }
-}
 .top-section {
   display: flex;
   flex-direction: column;
@@ -207,9 +194,9 @@ h3 {
 }
 .top-section #portrait {
   width: 300px;
-  margin: 10px 0 10px 5%;
+  margin: 20px 0 10px 5%;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .top-section #portrait {
     display: block;
     margin-left: auto;
