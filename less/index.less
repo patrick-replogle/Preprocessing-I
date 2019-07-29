@@ -88,9 +88,7 @@ h3 {
 	flex-direction: column;
 }
 
-
 //code below 
-
 
 .container {
 	max-width: 960px;
@@ -103,12 +101,25 @@ h3 {
 	justify-content: flex-end;
 	margin: 15px 3% 20px 0;
 
+	@media (max-width: 800px){
+			display: flex;
+			justify-content: center;
+			margin: 15px 3% 20px 0;
+		}
+
 	nav a {
 		font-family: @font;
 		text-decoration: none;
 		font-size: 2rem;			
 		color: black;
 		margin: 0 20px 0 20px;
+
+		@media (max-width: 800px){
+			text-decoration: none;
+			font-size: 2rem;			
+			color: black;
+			margin: 0 20px 0 20px;
+		}
 	}
 }
 
@@ -152,25 +163,21 @@ h3 {
 .top-section-div {
 	margin-left: 5%;
 	font-family: @font;	
-}
 
-#h1 {
-	margin: @tbdivmargin;
-}
-
-#h3 {
-	margin: @tbdivmargin;
-}
-
-#p {
-	.font-class();
-	margin: 20px 0;	
-}
-
-hr {
+	h1 {
+		margin: @tbdivmargin;
+	}
+	h3 {
+		margin: @tbdivmargin;
+	}
+	p {
+		.font-class();
+			margin: 20px 0;	
+	}
+	hr {
 	margin: 0 5% 0 0;
+	}
 }
-
 
 button {
 	background-color:#A9A9A9;
@@ -209,6 +216,12 @@ button {
 	margin: @leftmargin;  
 	width: 50%;
 
+	@media (max-width: 500px){
+		.column();
+		margin: @leftmargin; 
+		margin-top: 10px; 
+		width: 90%;	
+	}
 	p {
 		.font-class();
 		margin: @tbmargin;
@@ -216,14 +229,6 @@ button {
 	}
 }
 
-@media (max-width: 500px){
-	.div-box {
-		.column();
-		margin: @leftmargin; 
-		margin-top: 10px; 
-		width: 90%;	
-	}
-}
 
 .table1 {
     width:88%;
@@ -234,18 +239,16 @@ button {
 	border-collapse:collapse; 
 	margin: 15px 0 0 0;
 
+	@media (max-width: 500px){
+			width: 100%;
+			margin: 25px 0 22px 0;
+		}
+
 	th {
 		color:#000; 
 		vertical-align:middle;
 		text-align:left;
 		border:1px solid #000; 
-	}
-}
-
-@media (max-width: 500px){
-	.table1 {
-		width: 100%;
-		margin: 25px 0 22px 0;
 	}
 }
 
@@ -260,20 +263,22 @@ button {
 	margin: 20px 0 0 0;
 	font-size: 1.6rem;
 }
-
+	
 #table2 th {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: left;
 	color: black;
-  }
-
-  #table2 tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #table2 td, #table2 th {
+}
+	
+#table2 tr:nth-child(even){background-color: #f2f2f2;}
+	  
+#table2 td, #table2 th {
 	border: 1px solid #ddd;
 	padding: 8px;
-  }
+}
+
+
 
 footer {
 	display: flex;
@@ -281,6 +286,14 @@ footer {
 	align-items: left;
 	background: #888888;
 	margin: 30px 5% 15px 5%;
+	
+	@media (max-width:500px){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #888888;
+		margin: 30px 5% 15px 5%;
+	}
 
 	address {
 		.font-class();
@@ -290,12 +303,3 @@ footer {
 	}
 }
 
-@media (max-width:500px){
-	footer {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: #888888;
-		margin: 30px 5% 15px 5%;
-	}
-}

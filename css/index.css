@@ -160,12 +160,27 @@ h3 {
   justify-content: flex-end;
   margin: 15px 3% 20px 0;
 }
+@media (max-width: 800px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin: 15px 3% 20px 0;
+  }
+}
 .header nav a {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   text-decoration: none;
   font-size: 2rem;
   color: black;
   margin: 0 20px 0 20px;
+}
+@media (max-width: 800px) {
+  .header nav a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    margin: 0 20px 0 20px;
+  }
 }
 @media (max-width: 800px) {
   .header {
@@ -205,19 +220,19 @@ h3 {
   margin-left: 5%;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
-#h1 {
+.top-section-div h1 {
   margin: 15px 0 20px 0;
 }
-#h3 {
+.top-section-div h3 {
   margin: 15px 0 20px 0;
 }
-#p {
+.top-section-div p {
   color: black;
   font-size: 1.6rem;
   text-align: left;
   margin: 20px 0;
 }
-hr {
+.top-section-div hr {
   margin: 0 5% 0 0;
 }
 button {
@@ -257,13 +272,6 @@ button:hover {
   margin: 0 0 0 5%;
   width: 50%;
 }
-.div-box p {
-  color: black;
-  font-size: 1.6rem;
-  text-align: left;
-  margin: 10px 0 10px 0;
-  line-height: 2;
-}
 @media (max-width: 500px) {
   .div-box {
     display: flex;
@@ -272,6 +280,13 @@ button:hover {
     margin-top: 10px;
     width: 90%;
   }
+}
+.div-box p {
+  color: black;
+  font-size: 1.6rem;
+  text-align: left;
+  margin: 10px 0 10px 0;
+  line-height: 2;
 }
 .table1 {
   width: 88%;
@@ -282,17 +297,17 @@ button:hover {
   border-collapse: collapse;
   margin: 15px 0 0 0;
 }
-.table1 th {
-  color: #000;
-  vertical-align: middle;
-  text-align: left;
-  border: 1px solid #000;
-}
 @media (max-width: 500px) {
   .table1 {
     width: 100%;
     margin: 25px 0 22px 0;
   }
+}
+.table1 th {
+  color: #000;
+  vertical-align: middle;
+  text-align: left;
+  border: 1px solid #000;
 }
 .bottom-section {
   margin: 0 0 0 5%;
@@ -325,14 +340,6 @@ footer {
   background: #888888;
   margin: 30px 5% 15px 5%;
 }
-footer address {
-  color: black;
-  font-size: 1.6rem;
-  text-align: left;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color: white;
-  margin: 10px 0 10px 2%;
-}
 @media (max-width: 500px) {
   footer {
     display: flex;
@@ -341,4 +348,12 @@ footer address {
     background: #888888;
     margin: 30px 5% 15px 5%;
   }
+}
+footer address {
+  color: black;
+  font-size: 1.6rem;
+  text-align: left;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 10px 0 10px 2%;
 }
