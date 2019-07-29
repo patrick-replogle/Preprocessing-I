@@ -155,6 +155,11 @@ h3 {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 .header {
   display: flex;
   justify-content: flex-end;
@@ -299,14 +304,14 @@ button:hover {
 .bottom-section {
   margin: 0 0 0 5%;
 }
-#table2 {
+.bottom-section #table2 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 95%;
   margin: 20px 0 0 0;
   font-size: 1.6rem;
 }
-#table2 th {
+.bottom-section #table2 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;

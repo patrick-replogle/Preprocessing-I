@@ -94,6 +94,10 @@ h3 {
 	max-width: 960px;
 	width: 100%;
 	margin: 0 auto;
+
+	@media (max-width: 500px){
+		width: 100%;
+	}
 }
 
 .header {
@@ -244,21 +248,20 @@ button {
 
 .bottom-section {
 	margin: @leftmargin;
-}
 
-#table2 {
-	font-family: @font;
-	border-collapse: collapse;
-	width: 95%;
-	margin: 20px 0 0 0;
-	font-size: 1.6rem;
-
-	th {
-		padding-top: 12px;
-		padding-bottom: 12px;
-		text-align: left;
-		color: black;
-
+	#table2 {
+		font-family: @font;
+		border-collapse: collapse;
+		width: 95%;
+		margin: 20px 0 0 0;
+		font-size: 1.6rem;
+	
+		th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			color: black;
+		}
 	}
 }
 
