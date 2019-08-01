@@ -69,7 +69,7 @@ h3 {
 
 // variables
 
-@leftmargin: 0 0 0 5%;
+
 @tbmargin: 10px 0 10px 0;
 @tbdivmargin: 15px 0 20px 0;
 @font: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -116,13 +116,15 @@ h3 {
 		text-decoration: none;
 		font-size: 2rem;			
 		color: black;
-		margin: 0 20px 0 20px;
+		margin-right: 20px;
+		margin-left: 20px;
 
 		@media (max-width: 800px){
 			text-decoration: none;
 			font-size: 2rem;			
 			color: black;
-			margin: 0 20px 0 20px;
+			margin-right: 20px;
+			margin-left: 20px;
 		}
 	}
 }
@@ -167,7 +169,7 @@ h3 {
 	}
 
 	hr {
-		margin: 0 5% 0 0;
+		margin-right: 5%;
 	}
 }
 
@@ -205,12 +207,12 @@ button {
 
 .div-box {
 	.column();
-	margin: @leftmargin;  
+	margin-left: 5%;  
 	width: 50%;
 
 	@media (max-width: 500px){
 		.column();
-		margin: @leftmargin; 
+		margin-left: 5%; 
 		margin-top: 10px; 
 		width: 90%;	
 	}
@@ -229,11 +231,12 @@ button {
     border:1px solid #000;
     line-height: 2.5;
 	border-collapse:collapse; 
-	margin: 15px 0 0 0;
+	margin-top: 15px;
 
 	@media (max-width: 500px){
 			width: 100%;
-			margin: 25px 0 22px 0;
+			margin-top: 25px;
+			margin-bottom: 22px;
 		}
 
 	th {
@@ -247,13 +250,13 @@ button {
 //can't figure out how to nest this table fully
 
 .bottom-section {
-	margin: @leftmargin;
+	margin-left: 5%;
 
 	#table2 {
 		font-family: @font;
 		border-collapse: collapse;
 		width: 95%;
-		margin: 20px 0 0 0;
+		margin-top: 20px;
 		font-size: 1.6rem;
 	
 		th {
