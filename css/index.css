@@ -177,14 +177,16 @@ h3 {
   text-decoration: none;
   font-size: 2rem;
   color: black;
-  margin: 0 20px 0 20px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 @media (max-width: 800px) {
   .header nav a {
     text-decoration: none;
     font-size: 2rem;
     color: black;
-    margin: 0 20px 0 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 .top-section {
@@ -225,7 +227,7 @@ h3 {
   margin: 20px 0;
 }
 .top-section-div hr {
-  margin: 0 5% 0 0;
+  margin-right: 5%;
 }
 button {
   background-color: #A9A9A9;
@@ -261,14 +263,14 @@ button:hover {
 .div-box {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 5%;
+  margin-left: 5%;
   width: 50%;
 }
 @media (max-width: 500px) {
   .div-box {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 5%;
+    margin-left: 5%;
     margin-top: 10px;
     width: 90%;
   }
@@ -287,12 +289,13 @@ button:hover {
   border: 1px solid #000;
   line-height: 2.5;
   border-collapse: collapse;
-  margin: 15px 0 0 0;
+  margin-top: 15px;
 }
 @media (max-width: 500px) {
   .table1 {
     width: 100%;
-    margin: 25px 0 22px 0;
+    margin-top: 25px;
+    margin-bottom: 22px;
   }
 }
 .table1 th {
@@ -302,13 +305,13 @@ button:hover {
   border: 1px solid #000;
 }
 .bottom-section {
-  margin: 0 0 0 5%;
+  margin-left: 5%;
 }
 .bottom-section #table2 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 95%;
-  margin: 20px 0 0 0;
+  margin-top: 20px;
   font-size: 1.6rem;
 }
 .bottom-section #table2 th {

@@ -4,294 +4,378 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	font-size: 62.5%;
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
 }
 
 h1 {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 h3 {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
-
 
 // variables
 
-@leftmargin: 0 0 0 5%;
 @tbmargin: 10px 0 10px 0;
 @tbdivmargin: 15px 0 20px 0;
 @font: "Trebuchet MS", Arial, Helvetica, sans-serif;
 
-
 //Mixins
 
 .font-class {
-	color: black;
-	font-size: 1.6rem;
-	text-align: left;
+  color: black;
+  font-size: 1.6rem;
+  text-align: left;
 }
 
 .column {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-//code below 
+//code below
 
 .container {
-	max-width: 960px;
-	width: 100%;
-	margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
 
-	@media (max-width: 500px){
-		width: 100%;
-	}
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 }
 
 .header {
-	display: flex;
-	justify-content: flex-end;
-	margin: 15px 3% 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 3% 20px 0;
 
-	@media (max-width: 800px){
-			display: flex;
-			justify-content: center;
-			margin: 15px 3% 20px 0;
-		}
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    margin: 15px 3% 20px 0;
+  }
 
-	nav a {
-		font-family: @font;
-		text-decoration: none;
-		font-size: 2rem;			
-		color: black;
-		margin: 0 20px 0 20px;
+  nav a {
+    font-family: @font;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
 
-		@media (max-width: 800px){
-			text-decoration: none;
-			font-size: 2rem;			
-			color: black;
-			margin: 0 20px 0 20px;
-		}
-	}
+    @media (max-width: 800px) {
+      text-decoration: none;
+      font-size: 2rem;
+      color: black;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
 }
 
 .top-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	font-family: @font;
-	background:#E0E0E0;
-	width: 90%;
-	margin: 20px 0 20px 5%;
-	border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-family: @font;
+  background: #e0e0e0;
+  width: 90%;
+  margin: 20px 0 20px 5%;
+  border-radius: 4px;
 
-	#portrait {
-		width: 300px;
-		margin: 20px 0 10px 5%;
+  #portrait {
+    width: 300px;
+    margin: 20px 0 10px 5%;
 
-		@media (max-width: 800px){
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
-	}
+    @media (max-width: 800px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .top-section-div {
-	margin-left: 5%;
-	font-family: @font;	
+  margin-left: 5%;
+  font-family: @font;
 
-	h1 {
-		margin: @tbdivmargin;
-	}
+  h1 {
+    margin: @tbdivmargin;
+  }
 
-	h3 {
-		margin: @tbdivmargin;
-	}
+  h3 {
+    margin: @tbdivmargin;
+  }
 
-	p {
-		.font-class();
-		margin: 20px 0;	
-	}
+  p {
+    .font-class();
+    margin: 20px 0;
+  }
 
-	hr {
-		margin: 0 5% 0 0;
-	}
+  hr {
+    margin-right: 5%;
+  }
 }
 
 button {
-	background-color:#A9A9A9;
-	border: 1px solid white;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 1.6rem;
-	cursor: pointer;
-	width: 180px;
-	border-radius: 2px;
-	margin: 5px 0 40px 5%;
+  background-color: #a9a9a9;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 180px;
+  border-radius: 2px;
+  margin: 5px 0 40px 5%;
 
-	&:hover {
-		background-color: #4CAF50; /* Green */
-		color: white;
-	}
+  &:hover {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
 }
 
 .middle-section {
-	display: flex;
-	width: 100%;
-	font-family: @font;	
-	margin: @tbmargin;
+  display: flex;
+  width: 100%;
+  font-family: @font;
+  margin: @tbmargin;
 
-	@media (max-width: 500px){
-		display: flex;
-		flex-direction: column;
-	}
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .div-box {
-	.column();
-	margin: @leftmargin;  
-	width: 50%;
+  .column();
+  margin-left: 5%;
+  width: 50%;
 
-	@media (max-width: 500px){
-		.column();
-		margin: @leftmargin; 
-		margin-top: 10px; 
-		width: 90%;	
-	}
+  @media (max-width: 500px) {
+    .column();
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+  }
 
-	p {
-		.font-class();
-		margin: @tbmargin;
-		line-height: 2;
-	}
+  p {
+    .font-class();
+    margin: @tbmargin;
+    line-height: 2;
+  }
 }
 
 .table1 {
-    width:88%;
-	font-size:1.6rem;
-	font-family: @font;	
-    border:1px solid #000;
-    line-height: 2.5;
-	border-collapse:collapse; 
-	margin: 15px 0 0 0;
+  width: 88%;
+  font-size: 1.6rem;
+  font-family: @font;
+  border: 1px solid #000;
+  line-height: 2.5;
+  border-collapse: collapse;
+  margin-top: 15px;
 
-	@media (max-width: 500px){
-			width: 100%;
-			margin: 25px 0 22px 0;
-		}
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 22px;
+  }
 
-	th {
-		color:#000; 
-		vertical-align:middle;
-		text-align:left;
-		border:1px solid #000; 
-	}
+  th {
+    color: #000;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #000;
+  }
 }
 
 //can't figure out how to nest this table fully
 
 .bottom-section {
-	margin: @leftmargin;
+  margin-left: 5%;
 
-	#table2 {
-		font-family: @font;
-		border-collapse: collapse;
-		width: 95%;
-		margin: 20px 0 0 0;
-		font-size: 1.6rem;
-	
-		th {
-			padding-top: 12px;
-			padding-bottom: 12px;
-			text-align: left;
-			color: black;
-		}
-	}
+  #table2 {
+    font-family: @font;
+    border-collapse: collapse;
+    width: 95%;
+    margin-top: 20px;
+    font-size: 1.6rem;
+
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      color: black;
+    }
+  }
 }
 
-#table2 tr:nth-child(even){background-color: #f2f2f2;}
+#table2 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#table2 td, #table2 th {
-	border: 1px solid #ddd;
-	padding: 8px;
+#table2 td,
+#table2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 footer {
-	display: flex;
-	justify-content: flex-left;
-	align-items: left;
-	background: #888888;
-	margin: 30px 5% 15px 5%;
-	
-	@media (max-width:500px){
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: #888888;
-		margin: 30px 5% 15px 5%;
-	}
+  display: flex;
+  justify-content: flex-left;
+  align-items: left;
+  background: #888888;
+  margin: 30px 5% 15px 5%;
 
-	address {
-		.font-class();
-		font-family: @font;	
-		color: white;
-		margin: 10px 0 10px 2%;
-	}
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #888888;
+    margin: 30px 5% 15px 5%;
+  }
+
+  address {
+    .font-class();
+    font-family: @font;
+    color: white;
+    margin: 10px 0 10px 2%;
+  }
 }
-
